@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Analytics } from '@vercel/analytics/react'
 import Dashboard          from './components/Dashboard.jsx'
 import MazeSolver         from './modules/MazeSolver.jsx'
 import SlidingPuzzle      from './modules/SlidingPuzzle.jsx'
@@ -119,6 +120,7 @@ export default function App() {
         <div className="page">{COMPONENTS[page]}</div>
         <div className="statusbar">{status}</div>
       </div>
+      <Analytics />
     </div>
   )
 }
